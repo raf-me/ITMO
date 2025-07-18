@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profile>
+    <Study_Group>
+        <id>467478</id>
+        <id_admin>434637</id_admin>
+        <Study_name>Admin</Study_name>
+        <coordinates.x>1</coordinates.x>
+        <coordinates.y>1</coordinates.y>
+        <Semester>1</Semester>
+        <Group_ID>P3131</Group_ID>
+        <Group_Admin>111</Group_Admin>
+    </Study_Group>
+
+    <Person>
+        <Password_name>Ivan</Password_name>
+        <passportID>123456</passportID>
+        <hairColor>black</hairColor>
+        <height>170</height>
+    </Person>
+</profile>

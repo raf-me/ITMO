@@ -1,0 +1,36 @@
+public class StudyGroup {
+    private long id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
+    private String name; //Поле не может быть null, Строка не может быть пустой
+    private Coordinates coordinates; //Поле не может быть null
+    private java.time.LocalDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
+    private int studentsCount; //Значение поля должно быть больше 0
+    private int shouldBeExpelled; //Значение поля должно быть больше 0
+    private FormOfEducation formOfEducation; //Поле может быть null
+    private Semester semesterEnum; //Поле не может быть null
+    private Person groupAdmin; //Поле может быть null
+}
+public class Coordinates {
+    private Long x; //Поле не может быть null
+    private Double y; //Максимальное значение поля: 95, Поле не может быть null
+}
+public class Person {
+    private String name; //Поле не может быть null, Строка не может быть пустой
+    private Long height; //Поле может быть null, Значение поля должно быть больше 0
+    private String passportID; //Длина строки должна быть не меньше 4, Поле не может быть null
+    private Color hairColor; //Поле может быть null
+}
+public enum FormOfEducation {
+    DISTANCE_EDUCATION,
+    FULL_TIME_EDUCATION,
+    EVENING_CLASSES;
+}
+public enum Semester {
+    FOURTH,
+    FIFTH,
+    SIXTH;
+}
+public enum Color {
+    GREEN,
+    BLACK,
+    WHITE;
+}
