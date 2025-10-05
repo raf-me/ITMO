@@ -4,11 +4,12 @@ namespace ConsoleVendingMachine.data.FunctionalManager.MoneyAndPayManager;
 
 public class MoneyManager
 {
-    Money money = new Money();
     private float balance;
 
     public void Manager()
     {
+        Money money = new Money();
+        
         balance = money.DepositMoney();
         Console.WriteLine($"Вы внесли: {balance}₽");
         
@@ -20,4 +21,5 @@ public class MoneyManager
         dataCollection.PayProduct(ProductName, ref balance);
         Console.WriteLine($"Оставшиеся деньги: {balance}₽");
     }
+
 }
