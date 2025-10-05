@@ -9,6 +9,7 @@ public class AssortmentAdmin
     private string name;
     private float price;
     private int quantity;
+    
     public void AddManager()
     {
         var dataCollection = new DataCollection();
@@ -40,4 +41,5 @@ public class AssortmentAdmin
 
         dataCollection.RemoveProduct(name);
     }
+
 }
