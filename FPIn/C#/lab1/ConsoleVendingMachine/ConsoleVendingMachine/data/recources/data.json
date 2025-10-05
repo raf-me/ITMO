@@ -1,0 +1,23 @@
+[
+  {"name": "Special Card",
+    "price": 1200,
+    "quantity": 70},
+  {"name": "Coca-Cola (0,3 л)",
+    "price": 70,
+    "quantity": 15},
+  {"name": "iPhone 11 Pro 256 Gb NEW",
+    "price": 35000,
+    "quantity": 3},
+  {"name": "Forza Horizon 5: Premium Edition XBOX Series",
+    "price": 3500,
+    "quantity": 2},
+  {"name": "Pringles SuperMario Edition",
+    "price": 340,
+    "quantity": 4},
+  {"name": "Buldak 3x Spacy",
+    "price":  300,
+    "quantity": 3},
+  {"name": "Coffee Latte",
+    "price": 20,
+    "quantity": 20}
+]

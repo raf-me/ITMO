@@ -1,0 +1,4 @@
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\obj\Debug\net9.0\ConsoleVendingMachine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\obj\Debug\net9.0\ConsoleVendingMachine.AssemblyInfoInputs.cache
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\obj\Debug\net9.0\ConsoleVendingMachine.AssemblyInfo.cs
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\obj\Debug\net9.0\ConsoleVendingMachine.csproj.CoreCompileInputs.cache
