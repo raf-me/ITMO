@@ -1,0 +1,14 @@
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\obj\Debug\net9.0\ConsoleVendingMachine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\obj\Debug\net9.0\ConsoleVendingMachine.AssemblyInfoInputs.cache
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\obj\Debug\net9.0\ConsoleVendingMachine.AssemblyInfo.cs
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\obj\Debug\net9.0\ConsoleVendingMachine.csproj.CoreCompileInputs.cache
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\bin\Debug\net9.0\ConsoleVendingMachine.exe
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\bin\Debug\net9.0\ConsoleVendingMachine.deps.json
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\bin\Debug\net9.0\ConsoleVendingMachine.runtimeconfig.json
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\bin\Debug\net9.0\ConsoleVendingMachine.dll
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\bin\Debug\net9.0\ConsoleVendingMachine.pdb
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\obj\Debug\net9.0\ConsoleVendingMachine.dll
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\obj\Debug\net9.0\refint\ConsoleVendingMachine.dll
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\obj\Debug\net9.0\ConsoleVendingMachine.pdb
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\obj\Debug\net9.0\ConsoleVendingMachine.genruntimeconfig.cache
+C:\Users\admin\RiderProjects\ConsoleVendingMachine\ConsoleVendingMachine\obj\Debug\net9.0\ref\ConsoleVendingMachine.dll

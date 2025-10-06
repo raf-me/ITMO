@@ -1,0 +1,32 @@
+[
+  {
+    "Name": "Special Card",
+    "Price": 1200,
+    "Quantity": 67
+  },
+  {
+    "Name": "Coca-Cola (0,3 \u043B)",
+    "Price": 70,
+    "Quantity": 14
+  },
+  {
+    "Name": "iPhone 11 Pro 256 Gb NEW",
+    "Price": 35000,
+    "Quantity": 3
+  },
+  {
+    "Name": "Forza Horizon 5: Premium Edition XBOX Series",
+    "Price": 3500,
+    "Quantity": 2
+  },
+  {
+    "Name": "Pringles SuperMario Edition",
+    "Price": 340,
+    "Quantity": 4
+  },
+  {
+    "Name": "Buldak 3x Spacy",
+    "Price": 300,
+    "Quantity": 3
+  }
+]
