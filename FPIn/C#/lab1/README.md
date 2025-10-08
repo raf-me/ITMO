@@ -22,6 +22,13 @@ ConsoleVendingMachine -> data -> [src](https://github.com/raf-me/ITMO/tree/main/
 В **[src](https://github.com/raf-me/ITMO/tree/main/FPIn/C%23/lab1/ConsoleVendingMachine/ConsoleVendingMachine/data/src/)** находится код программы
 В **[recources](https://github.com/raf-me/ITMO/tree/main/FPIn/C%23/lab1/ConsoleVendingMachine/ConsoleVendingMachine/data/recources/)** находятся файлы, хранящие данные
 
-**[src](https://github.com/raf-me/ITMO/tree/main/FPIn/C%23/lab1/ConsoleVendingMachine/ConsoleVendingMachine/data/src/)**: 
-[CollectionManager](https://github.com/raf-me/ITMO/tree/main/FPIn/C%23/lab1/ConsoleVendingMachine/ConsoleVendingMachine/data/src/CollectionManager/) - здесь хранится код, предназначенный для
+1. src/[CollectionManager](https://github.com/raf-me/ITMO/tree/main/FPIn/C%23/lab1/ConsoleVendingMachine/ConsoleVendingMachine/data/src/CollectionManager/) - здесь хранится код, предназначенный для
 чтения из **json**, формирования коллекций и функции внутренних технических операций автомата
+[CollectionData](https://github.com/raf-me/ITMO/tree/main/FPIn/C%23/lab1/ConsoleVendingMachine/ConsoleVendingMachine/data/src/CollectionManager/CollectionData/) - здесь хранится классы:
+**ReadJSONforAdmin.cs** - здесь мы читаем person.json из recources, в котором хранятся ключи для админов.
+**ReadJSONforAssortmens.cs** - это класс распоковки данных из data.json, в котором хранятся данные ассортимента продуктов
+
+[CollectionAdmin](https://github.com/raf-me/ITMO/tree/main/FPIn/C%23/lab1/ConsoleVendingMachine/ConsoleVendingMachine/data/src/CollectionManager/CollectionAdmin/) - здесь хранится классы:
+**DataAdmin.cs** - здесь формируется коллекция, где во время выполнения программы в коллекции хрантся ключи для админов для "особого" пользования информационной системой.
+**DataCollection.cs** - 
+
