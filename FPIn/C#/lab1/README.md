@@ -30,11 +30,17 @@ ConsoleVendingMachine -> data -> [src](https://github.com/raf-me/ITMO/tree/main/
 
 [CollectionAdmin](https://github.com/raf-me/ITMO/tree/main/FPIn/C%23/lab1/ConsoleVendingMachine/ConsoleVendingMachine/data/src/CollectionManager/CollectionAdmin/) - здесь хранится классы:
 **DataAdmin.cs** - здесь формируется коллекция, где во время выполнения программы в коллекции хрантся ключи для админов для "особого" пользования информационной системой.
+
 **DataCollection.cs** - это, грубо говоря, мозг программы. Здесь реализованы такие методы, как: 
+
     AddProduct, RemoveProduct - Добавляют или удаляют продукт из коллекции; 
+    
     PayProduct - обработка покупки с последующей обрабработкой коллекции, а также сохранение денег в кассе в money.json 
+    
     SaveAssortment - сохранение коллекции в файл data.json
+    
     PrintAllProduct - вывод доступных товаров из коллекции в консоль
+
 
 
 
