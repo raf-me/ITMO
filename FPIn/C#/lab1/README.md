@@ -25,6 +25,7 @@ ConsoleVendingMachine -> data -> [src](https://github.com/raf-me/ITMO/tree/main/
 1. src/[CollectionManager](https://github.com/raf-me/ITMO/tree/main/FPIn/C%23/lab1/ConsoleVendingMachine/ConsoleVendingMachine/data/src/CollectionManager/) - здесь хранится код, предназначенный для
 чтения из **json**, формирования коллекций и функции внутренних технических операций автомата
 [CollectionData](https://github.com/raf-me/ITMO/tree/main/FPIn/C%23/lab1/ConsoleVendingMachine/ConsoleVendingMachine/data/src/CollectionManager/CollectionData/) - здесь хранится классы:
+
 **ReadJSONforAdmin.cs** - здесь мы читаем person.json из recources, в котором хранятся ключи для админов.
 **ReadJSONforAssortmens.cs** - это класс распоковки данных из data.json, в котором хранятся данные ассортимента продуктов
 
@@ -40,6 +41,7 @@ ConsoleVendingMachine -> data -> [src](https://github.com/raf-me/ITMO/tree/main/
     SaveAssortment - сохранение коллекции в файл data.json
     
     PrintAllProduct - вывод доступных товаров из коллекции в консоль
+
 
 
 
