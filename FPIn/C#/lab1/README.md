@@ -63,7 +63,17 @@ ConsoleVendingMachine -> data -> [src](https://github.com/raf-me/ITMO/tree/main/
 2. **MoneyAndPayManager** - реализует классы:
 
        *Money* - ввод купюры и обработка ошибки
-       *MoneyManager* - ввод купюры и выбор товара 
+   
+       *MoneyManager* - ввод купюры и выбор товара (Класс Money и DataCollection)
+
+3. **Main** - главная директория с главными классами:
+
+       *Programm* - Main класс-запуск программы
+   
+       *Menu* - Вход в программу, в котором осуществляется переходы в выбор товара, Admin-изменения и Бонус-класса
+   
+5. **InterfaceManager** - директория с ,jyecysv rkfccjv c rjt-rfrjq jncskrjq...
+
 
 
 
