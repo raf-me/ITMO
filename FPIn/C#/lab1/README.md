@@ -50,15 +50,20 @@ ConsoleVendingMachine -> data -> [src](https://github.com/raf-me/ITMO/tree/main/
   
        *AdminKey* - Реализует авторизацию админа по ключу, добавление товара в коллекцию (AddProduct),
            удаление товара из коллекции (RemoveProduct), и изъятие денег из кассы
+   
        *NameProduct* - вводим имя
+   
        *Price* - Ввод суммы товара
+   
        *Quantity* - ввод количества товара
+   
        *AssortmentAdmin* - Реализует методы AddManager и RemoveManager, которые вызывают классы
            _Price_, _Name_, _Quantity_, _DataCollection (методы AddProduct, RemoveProduct)_
 
 3. **MoneyAndPayManager** - реализует классы:
 
    
+
 
 
 
