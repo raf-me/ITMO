@@ -60,9 +60,11 @@ ConsoleVendingMachine -> data -> [src](https://github.com/raf-me/ITMO/tree/main/
        *AssortmentAdmin* - Реализует методы AddManager и RemoveManager, которые вызывают классы
            _Price_, _Name_, _Quantity_, _DataCollection (методы AddProduct, RemoveProduct)_
 
-3. **MoneyAndPayManager** - реализует классы:
+2. **MoneyAndPayManager** - реализует классы:
 
-   
+       *Money* - ввод купюры и обработка ошибки
+       *MoneyManager* - ввод купюры и выбор товара 
+
 
 
 
