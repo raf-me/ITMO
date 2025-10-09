@@ -58,7 +58,7 @@ ConsoleVendingMachine -> data -> [src](https://github.com/raf-me/ITMO/tree/main/
        *Quantity* - ввод количества товара
    
        *AssortmentAdmin* - Реализует методы AddManager и RemoveManager, которые вызывают классы
-           _Price_, _Name_, _Quantity_, _DataCollection (методы AddProduct, RemoveProduct)_
+           _Price_, _Name_, _Quantity_, _DataCollection_ (методы AddProduct, RemoveProduct)
 
 2. **MoneyAndPayManager** - реализует классы:
 
@@ -73,6 +73,7 @@ ConsoleVendingMachine -> data -> [src](https://github.com/raf-me/ITMO/tree/main/
        *Menu* - Вход в программу, в котором осуществляется переходы в выбор товара, Admin-изменения и Бонус-класса
    
 5. **InterfaceManager** - директория с ,jyecysv rkfccjv c rjt-rfrjq jncskrjq...
+
 
 
 
