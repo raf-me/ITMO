@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Menu>
+    <main_menu>
+        <name>"Стейк"</name>
+        <sale>2200.0</sale>
+        <discount>0</discount>
+    </main_menu>
+
+    <main_menu>
+        <name>"Луковый суп"</name>
+        <sale>900.0</sale>
+        <discount>7</discount>
+    </main_menu>
+
+    <main_menu>
+        <name>"Капучино 200м"</name>
+        <sale>160.0</sale>
+        <discount>0</discount>
+    </main_menu>
+
+    <main_menu>
+        <name>"Омлет"</name>
+        <sale>400.0</sale>
+        <discount>15</discount>
+    </main_menu>
+
+    <main_menu>
+        <name>"Торт Наполеон клубничный"</name>
+        <sale>950.0</sale>
+        <discount>0</discount>
+    </main_menu>
+</Menu>
