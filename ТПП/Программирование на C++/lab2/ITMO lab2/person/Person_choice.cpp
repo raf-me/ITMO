@@ -58,7 +58,7 @@ void Person_choice::choice_number() {
             action = new Person_choice_win_2();
         }
 
-        action->run(); // <--- это обязательно
+        action->run();
         delete action;
     }
 
@@ -68,4 +68,5 @@ void Person_choice::choice_number() {
         ConsoleColor::reset();
     }
 }
+
 
