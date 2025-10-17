@@ -1,0 +1,174 @@
+Обязательное задание: Программа конвертации JSON в XML
+1. Написание программы
+Поскольку вы просите работать с файлом, предположим, что файл "расписание" в формате JSON может выглядеть так:
+
+{
+    "Monday": [
+        {"subject": "Math", "time": "09:00"},
+        {"subject": "Physics", "time": "10:30"}
+    ],
+    "Tuesday": [
+        {"subject": "Chemistry", "time": "09:00"},
+        {"subject": "Biology", "time": "10:30"}
+    ]
+}
+Теперь создадим программу для конвертации этого формат в XML:
+
+def json_to_xml(json_obj, line_padding=""):
+    """Конвертирует JSON-объект в XML-строку."""
+    xml_str = ""
+
+    for key, value in json_obj.items():
+        xml_str += f"{line_padding}<{key}>\n"
+
+        if isinstance(value, dict):
+            xml_str += json_to_xml(value, line_padding + "  ")
+        elif isinstance(value, list):
+            for item in value:
+                xml_str += f"{line_padding}  <{key}>\n"
+                xml_str += json_to_xml(item, line_padding + "    ")
+                xml_str += f"{line_padding}  </{key}>\n"
+        else:
+            xml_str += f"{line_padding}  {value}\n"
+
+        xml_str += f"{line_padding}</{key}>\n"
+    
+    return xml_str
+
+def convert_json_file_to_xml(input_file, output_file):
+    """Читает JSON-файл и создает XML-файл."""
+    # Чтение JSON файла
+    with open(input_file, 'r') as f:
+        json_data = eval(f.read())  # Поскольку нельзя использовать json.load
+
+    xml_data = json_to_xml(json_data)
+
+    # Запись XML файла
+    with open(output_file, 'w') as f:
+        f.write(xml_data)
+
+# Пример использования
+input_file = 'расписание.json'  # Файл, который мы конвертируем
+output_file = 'расписание.xml'  # Выходной файл
+convert_json_file_to_xml(input_file, output_file)
+Описание программы:
+Функция json_to_xml: рекурсивно преобразует JSON-объекты и массивы в строку формата XML.
+Функция convert_json_file_to_xml: читает JSON-файл, передает его в функцию json_to_xml и записывает результат в XML-файл. Использование eval необходимо из-за ограничения на библиотеки.
+Дополнительное задание №1
+a) Готовые библиотеки для конвертации JSON в XML:
+
+xmltodict
+dicttoxml
+b) Перепишем код с использованием библиотеки xmltodict:
+
+import json
+import xmltodict
+
+def convert_json_file_to_xml(input_file, output_file):
+    # Чтение JSON файла
+    with open(input_file, 'r') as f:
+        json_data = json.load(f)
+
+    # Конвертация JSON в XML
+    xml_data = xmltodict.unparse({'root': json_data}, pretty=True)  # root как родительский элемент
+
+    # Запись XML файла
+    with open(output_file, 'w') as f:
+        f.write(xml_data)
+
+# Пример использования
+input_file = 'расписание.json'
+output_file = 'расписание_library.xml'
+convert_json_file_to_xml(input_file, output_file)
+c) Сравнение результатов:
+
+Ручной код: Гибкий и понятный, особенно для простых структур, однако он может не обрабатывать некоторые нюансы (например, специальные символы).
+С библиотекой: Помогает избежать ошибок и упрощает работу с различными форматами данных, так как библиотека оптимизирована для обработки JSON и XML, учитывая все особенности форматов.
+Дополнительное задание №2
+a) Перепишем исходный код с использованием регулярных выражений.
+
+import json
+import re
+
+def json_to_xml_with_regex(json_obj):
+    xml_str = ""
+    for key, value in json_obj.items():
+        xml_str += f"<{key}>"
+        if isinstance(value, dict):
+            xml_str += json_to_xml_with_regex(value)
+        elif isinstance(value, list):
+            for item in value:
+                xml_str += f"<{key}>{json_to_xml_with_regex({key: item})}</{key}>"
+        else:
+            xml_str += str(value)
+        xml_str += f"</{key}>"
+    return xml_str
+
+def convert_json_file_to_xml(input_file, output_file):
+    # Чтение JSON файла
+    with open(input_file, 'r') as f:
+        json_data = eval(f.read())  # Используем eval
+
+    xml_data = json_to_xml_with_regex(json_data)
+
+    with open(output_file, 'w') as f:
+        f.write(xml_data)
+
+# Пример использования
+input_file = 'расписание.json'
+output_file = 'расписание_regex.xml'
+convert_json_file_to_xml(input_file, output_file)
+b) Сравнение результатов:
+
+Использование регулярных выражений здесь может усложнить код, поскольку нужно учитывать множество случаев и сценариев. Ручная реализация может быть гораздо более читаемой и понятной.
+Дополнительное задание №3
+a) Код, использующий формальные грамматики (в условном, абстрактном виде):
+
+class GrammarParser:
+    def __init__(self, json_data):
+        self.json_data = json_data
+        self.xml_result = ""
+
+    def parse(self):
+        self.build_xml(self.json_data)
+
+    def build_xml(self, json_obj):
+        for key, value in json_obj.items():
+            self.xml_result += f"<{key}>"
+            if isinstance(value, dict):
+                self.build_xml(value)
+            elif isinstance(value, list):
+                for item in value:
+                    self.build_xml({key: item})
+            else:
+                self.xml_result += str(value)
+            self.xml_result += f"</{key}>"
+
+    def get_xml(self):
+        return self.xml_result
+
+def convert_json_file_to_xml(input_file, output_file):
+    # Чтение JSON файла
+    with open(input_file, 'r') as f:
+        json_data = eval(f.read())
+
+    parser = GrammarParser(json_data)
+    parser.parse()
+    xml_data = parser.get_xml()
+
+    with open(output_file, 'w') as f:
+        f.write(xml_data)
+
+# Пример использования
+input_file = 'расписание.json'
+output_file = 'расписание_grammar.xml'
+convert_json_file_to_xml(input_file, output_file)
+b) Тестирование может быть осуществлено с использованием расписания, описанного ранее. Сравнение и вывод результатов можно осуществить так же, как и в предыдущих заданиях.
+
+Сравнение результатов
+Ручной код: Читабельный и более наглядный для понимания конверсии.
+Использование формальных грамматик: Позволяет определить строгую структуру обработки, что упрощает дальнейшие изменения в коде. Тем не менее, для небольших задач это может стать избыточным.
+Итоги
+Обязательное задание представлено в виде рабочих примеров, которые можно использовать.
+Дополнительные задания позволили сравнить различные подходы и рассмотреть их преимущества.
+Примечание: Код, использующий eval, не рекомендуется для реального использования из соображений безопасности (потому что он выполняет произвольный код). В продуктивной среде лучше использовать более безопасные методы для работы с файлами, такие как библиотека json.

@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{document}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[scale=1.5]
+
+% Координаты точек
+\coordinate (A) at (-2, 2);
+\coordinate (K) at (-1, 1.5);
+\coordinate (B) at (0, 1);
+\coordinate (P) at (1, 2);
+\coordinate (Q) at (1, -1);
+\coordinate (L) at (2, -1.5);
+\coordinate (C) at (3, -2);
+\coordinate (D) at (4, -1);
+
+% Левый треугольник
+\fill[cyan!20,opacity=0.7] (A) -- (K) -- (B) -- cycle;
+\draw[thick] (A) -- (K) -- (B) -- cycle;
+\draw[dashed] (K) -- (B);
+
+% Правый треугольник
+\fill[cyan!20,opacity=0.7] (C) -- (L) -- (D) -- cycle;
+\draw[thick] (C) -- (L) -- (D) -- cycle;
+\draw[dashed] (L) -- (C);
+
+% Красная прямая s
+\draw[red, thick] (B) -- (L) node[midway, above] {\textit{s}};
+
+% Линии соединения треугольников
+\draw[thick] (B) -- (Q);
+\draw[thick] (Q) -- (L);
+
+% Метки точек
+\node[above left] at (A) {$A$};
+\node[above] at (K) {$K$};
+\node[below] at (B) {$B$};
+\n
