@@ -1,0 +1,104 @@
+bonsly4:
+Способности Copycat Fake Tears Flail Low Lick Rock Throw
+Slam Faint Attack Rock Tomb Block Rock Slide Mimic Sucker Punch
+Double-Edge
+
+sandile7:
+Тип диеты Carnivore
+
+zubat:
+Живёт
+Cave
+
+wooper8:
+Живёт Freshwater Marsh
+
+
+[s467478@helios ~]$ mkdir lab0
+[s467478@helios ~]$ cd
+[s467478@helios ~]$ cd lab0
+[s467478@helios ~/lab0]$ ls
+[s467478@helios ~/lab0]$ echo "Способности Copycat Fake Tears Flail Low Lick Rock Throw
+Slam Faint Attack Rock Tomb Block Rock Slide Mimic Sucker Punch
+Double-Edge
+" > bonsly4
+[s467478@helios ~/lab0]$ ls
+bonsly4
+[s467478@helios ~/lab0]$ mkdir claydol6
+[s467478@helios ~/lab0]$ ls
+bonsly4         claydol6
+[s467478@helios ~/lab0]$ cd claydol6
+[s467478@helios ~/lab0/claydol6]$ ls
+[s467478@helios ~/lab0/claydol6]$ mkdir pikachu
+[s467478@helios ~/lab0/claydol6]$ mkdir dodrio
+[s467478@helios ~/lab0/claydol6]$ mkdir spoink
+[s467478@helios ~/lab0/claydol6]$ mkdir chinchou
+[s467478@helios ~/lab0/claydol6]$ ls
+chinchou        dodrio          pikachu         spoink
+[s467478@helios ~/lab0/claydol6]$ cd ..
+[s467478@helios ~/lab0]$ echo "Тип диеты Carnivore" > sandile7
+[s467478@helios ~/lab0]$ mkdir volcarona4
+[s467478@helios ~/lab0]$ cd volcarona4
+[s467478@helios ~/lab0/volcarona4]$ mkdir lumineon
+[s467478@helios ~/lab0/volcarona4]$ echo "Живёт
+Cave
+" > zubat
+[s467478@helios ~/lab0/volcarona4]$ mkdir hariyama
+[s467478@helios ~/lab0/volcarona4]$ mkdir shieldon
+[s467478@helios ~/lab0/volcarona4]$ cd ..
+[s467478@helios ~/lab0]$ mkdir wobbuffet7
+[s467478@helios ~/lab0]$ cd wobbuffet7
+[s467478@helios ~/lab0/wobbuffet7]$ mkdir munchlax
+[s467478@helios ~/lab0/wobbuffet7]$ mkdir dusclops
+[s467478@helios ~/lab0/wobbuffet7]$ mkdir conkeldurr
+[s467478@helios ~/lab0/wobbuffet7]$ cd ..
+[s467478@helios ~/lab0]$ echo "Живёт Freshwater Marsh" > wooper8
+[s467478@helios ~/lab0]$ chmod 440 bonsly4
+[s467478@helios ~/lab0]$ chmod 312 claydol6
+[s467478@helios ~/lab0]$ cd claydol6
+[s467478@helios ~/lab0/claydol6]$ chmod 577 pikachu
+[s467478@helios ~/lab0/claydol6]$ chmod 577 dodrio
+[s467478@helios ~/lab0/claydol6]$ chmod 577 spoink
+[s467478@helios ~/lab0/claydol6]$ chmod 576 chinchou
+[s467478@helios ~/lab0/claydol6]$ cd ..
+[s467478@helios ~/lab0]$ chmod 062 sandile7
+[s467478@helios ~/lab0]$ chmod 363 volcarona4
+[s467478@helios ~/lab0]$ cd volcarona4
+[s467478@helios ~/lab0/volcarona4]$ chmod 733 lumineon
+[s467478@helios ~/lab0/volcarona4]$ chmod 400 zubat
+[s467478@helios ~/lab0]$ chmod 755 volcarona4
+[s467478@helios ~/lab0]$ cd volcarona4
+[s467478@helios ~/lab0/volcarona4]$ chmod 754 hariyama
+[s467478@helios ~/lab0/volcarona4]$ chmod 711 shieldon
+[s467478@helios ~/lab0/volcarona4]$ cd ..
+[s467478@helios ~/lab0]$ cd wobbuffet7
+[s467478@helios ~/lab0/wobbuffet7]$ chmod 751 munchlax
+[s467478@helios ~/lab0/wobbuffet7]$ chmod 357 dusclops
+[s467478@helios ~/lab0/wobbuffet7]$ chmod 357 munchlax
+[s467478@helios ~/lab0/wobbuffet7]$ cd ..
+[s467478@helios ~/lab0]$ chmod 046 wooper8
+[s467478@helios ~/lab0]$ cd wobbuffet7
+[s467478@helios ~/lab0/wobbuffet7]$ chmod 512 conkeldurr
+[s467478@helios ~/lab0/wobbuffet7]$ chmod 357 dusclops
+[s467478@helios ~/lab0/wobbuffet7]$ chmod 751 munchlax
+[s467478@helios ~/lab0/wobbuffet7]$ cd ..
+[s467478@helios ~/lab0]$ chmod 511 wobbuffet7
+[s467478@helios ~/lab0]$ ln -s volcarona4 Copy50
+[s467478@helios ~/lab0]$ cp sandile7 claydol6/pikachu/sandile7
+[s467478@helios ~/lab0]$ cp wooper8 volcarona4/zubatwooper
+[s467478@helios ~/lab0]$ cat volcarona4/zubat volcarona4/zubat > wooper8_78
+[s467478@helios ~/lab0]$ cp -r volcarona4 wobbuffet7/munchlax
+[s467478@helios ~/lab0]$ cp wooper8 volcarona4
+[s467478@helios ~/lab0]$ ln -s wooper8 volcarona4/zubatwooper_1
+[s467478@helios ~/lab0]$ ln sandile7 volcarona4/zubatsandile
+[s467478@helios ~/lab0/volcarona4]$ cat zubat | xc -c > /tmp/zubat_char_count 2>&1
+[s467478@helios ~]$ grep -r "wo" lab0
+[s467478@helios ~]$ cd lab0
+[s467478@helios ~/lab0]$ ls -lruR | grep -E "[0-9]{2}:[0-9]{2} *wo*" | sort -k2,2nr
+[s467478@helios ~/lab0]$ ls -1R | grep '^s' | cat | sort -r
+[s467478@helios ~/lab0]$ grep -ni "Ro" volcarona4/zubat
+[s467478@helios ~/lab0]$ ls volcarona4 2>&1 | sort -r
+[s467478@helios ~/lab0]$ ls claydol6 | sort
+
+
+
