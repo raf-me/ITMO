@@ -31,10 +31,13 @@ public class Wspp {
                         "Время выполнения: " + (elapsedNanos / 1_000_000) + " ms\n" +
                         "Исп. память (дельта): " + String.format("%,d", memDeltaBytes) + " bytes\n" +
                         "======================\n";
+        
         System.out.print(report);
+        
         try (BufferedWriter bw = new BufferedWriter(new FileWriter("history.txt", true))) {
             bw.write(report);
             bw.newLine();
+            
         } catch (IOException e) {
             System.err.println("Ошибка записи отчёта в history.txt: " + e.getMessage());
         }
@@ -142,6 +145,7 @@ public class Wspp {
                             "Время выполнения: " + (elapsed / 1_000_000) + " ms\n" +
                             "Исп. память (дельта): " + String.format("%,d", memDelta) + " bytes\n" +
                             "======================\n";
+            
             bw.write(report);
             bw.newLine();
 
