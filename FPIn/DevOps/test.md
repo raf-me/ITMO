@@ -182,9 +182,7 @@ http://helios.cs.ifmo.ru
 Когда я попытался зайти на какой-нибудь из доступных, сайт лёг:
 
 
-
-Скриншот падения se.ifmo.ru
-
+![se_ifmo_error](./seifmo_error.png)
 
 ---
 
@@ -199,9 +197,7 @@ https://fitp.itmo.ru/Profile
 
 ведёт в пустую страницу.
 
-
-
-Скрин fitp.itmo.ru/Profile
+![fitp_empty](./fitp_empty.png)
 
 
 ---
