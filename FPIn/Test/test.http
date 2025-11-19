@@ -1,0 +1,15 @@
+### /api/categorize — как в ТЗ
+POST http://localhost:8080/api/categorize
+Content-Type: application/json
+
+{
+  "receiptId": "123",
+  "categories": [
+    { "id": 1, "name": "Продукты", "description": "Продукты питания" },
+    { "id": 2, "name": "Транспорт", "description": "Транспортные расходы" },
+    { "id": 3, "name": "Еда", "description": "Еда вне дома" },
+    { "id": 4, "name": "Здоровье", "description": "Медицинские расходы" },
+    { "id": 5, "name": "Другое", "description": "Прочие расходы" },
+    { "id": 6, "name": "Одежда", "description": "Одежда и обувь" }
+  ]
+}
