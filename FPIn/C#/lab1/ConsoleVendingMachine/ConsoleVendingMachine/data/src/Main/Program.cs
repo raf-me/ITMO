@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using ConsoleVendingMachine.data.Main;
+﻿using ConsoleVendingMachine.data.Main;
 
 public class Program
 {
@@ -8,4 +7,5 @@ public class Program
         Menu menu = new Menu();
         menu.MenuChoice();
     }
+
 }
