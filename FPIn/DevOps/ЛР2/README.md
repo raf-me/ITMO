@@ -339,7 +339,10 @@
 
 ## Хранение секретов в переменных окружения
 
-        docker run -e DB_PASSWORD=123 demo-backend
+    docker run \
+      -e RECEIPT_API_TOKEN=real_token_here \
+      -p 8080:8080 \
+        demo-backend
 
 Переменные окружения:
 - легко читаются через docker inspect,
@@ -354,11 +357,14 @@
 
 Правильный вариант:
 
-.env файл
+##### Исправленный пример docker run -e:
 
-    DB_PASSWORD=123
-    DB_USER=demo
-    DB_HOST=localhost
+.env файл:
+
+    RECEIPT_API_TOKEN=token (токен скрыт от git)
+    SERVER_PORT=8080
+    RECEIPT_API_URL=https://proverkacheka.com/api/v1/check/get
+    SPRING_PROFILES_ACTIVE=dev
 
 И запускается:
 
