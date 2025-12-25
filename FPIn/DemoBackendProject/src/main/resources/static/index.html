@@ -1,35 +1,373 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Demo Backend Test</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> demobackendproject - Документация</title>
+    <style>
+        :root{
+            --bg:#0f1220;
+            --panel:#14182a;
+            --panel-2:#1b2140;
+            --text:#e9ecf1;
+            --muted:#b7bfd3;
+            --brand:#6ee7f3;
+            --brand-2:#8b5cf6;
+            --accent:#22d3ee;
+            --ok:#10b981;
+            --warn:#f59e0b;
+            --shadow: 0 10px 30px rgba(0,0,0,.35);
+            --radius:18px;
+            --code:#0b0e1a;
+            --border:1px solid rgba(255,255,255,.06);
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0;
+            background:
+                    radial-gradient(1200px 600px at 85% -10%, rgba(139,92,246,.25), transparent 60%),
+                    radial-gradient(800px 500px at -10% 10%, rgba(34,211,238,.25), transparent 60%),
+                    var(--bg);
+            color:var(--text);
+            font:16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+        }
+
+        /* header */
+        .hero{
+            position:relative;
+            padding:56px 28px 36px;
+            text-align:center;
+            border-bottom: var(--border);
+            background:
+                    linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
+        }
+        .title{
+            margin:0 0 10px;
+            font-size: clamp(28px, 4vw, 44px);
+            letter-spacing:.3px;
+            font-weight:800;
+            background: linear-gradient(90deg, var(--brand), var(--brand-2));
+            -webkit-background-clip:text; background-clip:text; color:transparent;
+        }
+        .subtitle{
+            margin:0 auto;
+            max-width:920px;
+            color:var(--muted);
+            font-size:clamp(14px, 1.9vw, 18px);
+        }
+        .badges{margin-top:18px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
+        .badge{
+            background:linear-gradient(180deg, var(--panel), var(--panel-2));
+            border:var(--border);
+            padding:8px 12px; border-radius:999px; font-size:13px; color:var(--muted)
+        }
+
+        /* layout */
+        .container{max-width:1120px; margin:28px auto 72px; padding:0 20px; display:grid; grid-template-columns: 270px 1fr; gap:22px}
+        @media (max-width: 980px){ .container{grid-template-columns: 1fr} }
+
+        /* sidebar */
+        .toc{
+            position:sticky; top:20px;
+            background:linear-gradient(180deg, var(--panel), var(--panel-2));
+            border:var(--border); border-radius:var(--radius); box-shadow:var(--shadow);
+            padding:16px 14px;
+        }
+        .toc h3{margin:0 0 8px; font-size:14px; letter-spacing:.4px; color:var(--muted); font-weight:700; text-transform:uppercase}
+        .toc a{
+            display:block; padding:8px 10px; margin:2px 0; border-radius:10px;
+            color:var(--text); text-decoration:none; font-size:14px;
+        }
+        .toc a:hover{background:rgba(255,255,255,.06)}
+        .toc .small{color:var(--muted); font-size:13px}
+
+        /* content */
+        .card{
+            background:linear-gradient(180deg, var(--panel), var(--panel-2));
+            border:var(--border); border-radius:var(--radius); box-shadow:var(--shadow);
+            overflow:hidden; margin-bottom:22px;
+        }
+        .section{padding:22px 22px 2px}
+        .section h2{
+            margin:0 0 14px; font-size:22px; letter-spacing:.2px
+        }
+        .lead{color:var(--muted); margin-top:-6px; margin-bottom:18px}
+
+        /* code blocks */
+        pre, code{
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+            font-size:13.5px
+        }
+        pre{
+            margin:14px 0 18px; padding:16px 18px; background:var(--code); border-radius:12px; border:var(--border); overflow:auto
+        }
+        code.inline{background:rgba(255,255,255,.08); padding:.2em .45em; border-radius:6px}
+
+        /* details */
+        details{
+            border:var(--border); border-radius:12px; padding:12px 14px; background:rgba(255,255,255,.03); margin:12px 0 14px
+        }
+        details > summary{
+            cursor:pointer; list-style:none; font-weight:700;
+        }
+        details > summary::-webkit-details-marker{display:none}
+        details[open]{background:rgba(255,255,255,.05)}
+
+        /* pills */
+        .pill{display:inline-flex; gap:6px; align-items:center; padding:6px 10px; border-radius:999px; background:rgba(255,255,255,.06); border:var(--border); color:var(--muted); font-size:12px; margin-right:6px}
+        .ok{color:var(--ok)} .warn{color:var(--warn)}
+
+        .footer{
+            text-align:center; color:var(--muted); padding:28px; border-top:var(--border)
+        }
+    </style>
 </head>
 <body>
-<h1>Заголовок первого уровня</h1>
-<h2>Второго</h2>
-<h3>Третьего ## уровня</h3>
-<h4>Четвертого
-    # Все еще четвертого</h4>
-<p>Этот абзац текста
-    содержит две строки.</p>
-<p>    # Может показаться, что это заголовок.
-    Но нет, это абзац, начинающийся с <code>#</code>.</p>
-<p>#И это не заголовок.</p>
-<h6>Заголовки могут быть многострочными
-    (и с пропуском заголовков предыдущих уровней)</h6>
-<p>Мы все любим <em>выделять</em> текст <em>разными</em> способами.
-    <strong>Сильное выделение</strong>, используется гораздо реже,
-    но <strong>почему бы и нет</strong>?
-    Немного <s>зачеркивания</s> еще никому не вредило.
-    Код представляется элементом <code>code</code>.</p>
-<p>Обратите внимание, как экранируются специальные
-    HTML-символы, такие как <code>&lt;</code>, <code>&gt;</code> и <code>&amp;</code>.</p>
-<p>Знаете ли вы, что в Markdown, одиночные * и _
-    не означают выделение?
-    Они так же могут быть заэкранированы
-    при помощи обратного слэша: *.</p>
-<p>Лишние пустые строки должны игнорироваться.</p>
-<p>Любите ли вы <em>вложенные <strong>выделения</strong></em> так,
-    как <strong><s>люблю</s></strong> их я?</p>
+
+<header class="hero">
+    <h1 class="title">Demo demobackendproject Project · Spring Boot</h1>
+    <p class="subtitle">
+        Внутренний стартовый экран проекта. Здесь — краткая документация по структуре,
+        назначению модулей и практическому использованию основных классов.
+    </p>
+    <div class="badges">
+        <span class="badge">Java / Spring Boot / WebFlux</span>
+        <span class="badge">REST · JSON</span>
+        <span class="badge">Stateless API</span>
+        <span class="badge">Документация в коде</span>
+    </div>
+</header>
+
+<main class="container">
+    <!-- TOC -->
+    <nav class="toc">
+        <h3>Навигация</h3>
+        <a href="#structure">Структура проекта</a>
+        <a href="#http-data">HTTP_DATA.java</a>
+        <a href="#decode-api">ReceiptDecodeApi.java</a>
+        <a href="#dto">DTO-модели</a>
+        <a href="#webclient">WebClientConfig.java <span class="small">· HTTP-клиент</span></a>
+        <a href="#security">SecurityConfig.java <span class="small">· доступ</span></a>
+        <a href="#endpoints">REST-эндпоинты</a>
+        <a href="#tips">Полезно знать</a>
+    </nav>
+
+    <!-- CONTENT -->
+    <section>
+
+        <!-- STRUCTURE -->
+        <article id="structure" class="card section">
+            <h2>Структура проекта</h2>
+            <p class="lead">Папки и ответственность модулей.</p>
+            <pre><code>src/
+└─ main/
+   ├─ java/com/example/demobackendproject
+   │  ├─ api/                 # Обёртки над внешними HTTP-API
+   │  │   └─ ReceiptDecodeApi.java
+   │  ├─ config/              # Java-конфигурация Spring
+   │  │   ├─ SecurityConfig.java
+   │  │   └─ WebClientConfig.java
+   │  ├─ controller/          # REST-контроллеры
+   │  │   └─ ReceiptController.java
+   │  ├─ dto/                 # DTO для запросов/ответов
+   │  │   ├─ CategoryDTO.java
+   │  │   ├─ ReceiptItemDTO.java
+   │  │   ├─ ReceiptQRRequestDTO.java
+   │  │   ├─ ReceiptQrParseDTO.java
+   │  │   ├─ ReceiptRequestDTO.java
+   │  │   └─ ReceiptResponseDTO.java
+   │  └─ service/
+   │      └─ HTTP_DATA.java   # Бизнес-логика/оркестрация
+   └─ resources/
+      ├─ static/index.html    # Эта страница
+      ├─ application.properties
+      └─ test.http            # HTTP-сценарии для теста из IDE</code></pre>
+        </article>
+
+        <!-- HTTP_DATA -->
+        <article id="http-data" class="card section">
+            <h2>HTTP_DATA.java</h2>
+            <p class="lead">Сервис-оркестратор: вызывает внешнее decode-API и собирает ответ для фронта.</p>
+
+            <div class="pill"><span class="ok">✓</span>Валидные ответы</div>
+            <div class="pill"><span class="warn">!</span>Аккуратная обработка ошибок</div>
+
+            <details open>
+                <summary>Метод <code class="inline">String decodeRawQR(String qrString)</code></summary>
+                <ul>
+                    <li><b>Что делает:</b> вызывает <code class="inline">decodeApi.decodeReceipt(...).block(...)</code> и возвращает сырой JSON/текст из внешнего сервиса.</li>
+                    <li><b>Ошибки внешки:</b> ловит <code class="inline">WebClientResponseException</code> и пробрасывает <code class="inline">502 Bad Gateway</code> с телом ошибки.</li>
+                    <li><b>Прочие сбои:</b> возвращает <code class="inline">503 Service Unavailable</code>.</li>
+                    <li><b>Практика:</b> пригодно для health-проверок и диагностики — видно, что отвечает внешка.</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Метод <code class="inline">ReceiptResponseDTO processReceipt(ReceiptRequestDTO request)</code></summary>
+                <ul>
+                    <li><b>Сейчас:</b> кладёт отладочные данные, при наличии <code class="inline">receiptId</code> вызывает decode-API (мокается, если токен пустой), собирает <code class="inline">ReceiptResponseDTO</code>.</li>
+                    <li><b>Практика:</b> «скелет» бизнес-процесса: сюда добавится парсинг сырого JSON чека → маппинг в <code class="inline">items</code> → расчёт <code class="inline">totalSum</code> → категоризация по входному справочнику.</li>
+                    <li><b>Отладка:</b> поле <code class="inline">debugData</code> — быстрый способ увидеть ответ внешки без логов.</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Метод <code class="inline">Map&lt;String,String&gt; parseQrCode(String qr)</code></summary>
+                <ul>
+                    <li><b>Что делает:</b> разбирает строку QR по <code class="inline">&amp;</code> и <code class="inline">=</code>.</li>
+                    <li><b>Практика:</b> быстро вытащить параметры <code class="inline">t, s, fn, i, fp, n</code> для дальнейшей логики.</li>
+                </ul>
+            </details>
+        </article>
+
+        <!-- ReceiptDecodeApi -->
+        <article id="decode-api" class="card section">
+            <h2>ReceiptDecodeApi.java</h2>
+            <p class="lead">Единая точка общения с внешним сервисом «decode-API».</p>
+
+            <pre><code>private WebClient webClient;
+
+@Value("${receipt.api.token}")
+private String apiToken;
+
+@Value("${receipt.api.url}")
+private String apiUrl;</code></pre>
+
+            <ul>
+                <li><b>Где хранить конфиг:</b> <code class="inline">application.properties</code>/переменные среды.</li>
+                <li><b>Локальный режим:</b> если токен пустой или равен "token" — возвращается мок: <code class="inline">{"mock":true,"message":"external call skipped"}</code>.</li>
+                <li><b>Прод:</b> запрос <code class="inline">GET ${apiUrl}?token=...&amp;qr=...</code>, ошибки конвертируются в <code class="inline">ReceiptApiException</code>.</li>
+                <li><b>Практика:</b> тут удобно держать таймауты, ретраи, логирование, метрики, маскирование токенов.</li>
+            </ul>
+        </article>
+
+        <!-- DTO -->
+        <article id="dto" class="card section">
+            <h2>DTO-модели</h2>
+            <p class="lead">Чёткие контракты входа/выхода REST-эндпоинтов.</p>
+
+            <details open>
+                <summary>ReceiptRequestDTO</summary>
+                <pre><code>private String receiptId;
+private List&lt;CategoryDTO&gt; categories;</code></pre>
+                <p><b>Назначение:</b> тело запроса для <code class="inline">/api/categorize</code>.</p>
+                <p><b>Практика:</b> фронт присылает <code class="inline">receiptId</code> и актуальный справочник категорий (id, название, описание), чтобы бэк категоризировал товары в рамках этого справочника.</p>
+            </details>
+
+            <details>
+                <summary>ReceiptResponseDTO</summary>
+                <pre><code>private String receiptId;
+private List&lt;ReceiptItemDTO&gt; items;
+private float totalSum;
+private List&lt;CategoryDTO&gt; categories;
+private Map&lt;String, Object&gt; debugData;</code></pre>
+                <p><b>Назначение:</b> текущий «плоский» ответ бэка.</p>
+                <p><b>Практика:</b> удобно на ранней стадии: фронт видит, что пришло, пока вы шагами наполняете <code class="inline">items</code> и <code class="inline">totalSum</code>.</p>
+            </details>
+
+            <details>
+                <summary>ReceiptItemDTO</summary>
+                <p><b>Позиция чека:</b> id, name, sum, price, quantity, category.</p>
+                <p><b>Практика:</b> маппится из расшифрованного JSON; <code class="inline">category</code> выставляется по справочнику из запроса.</p>
+            </details>
+
+            <details>
+                <summary>ReceiptQRRequestDTO / ReceiptQrParseDTO</summary>
+                <p><b>Назначение:</b> простые обёртки под тела POST <code class="inline">/decode</code> и <code class="inline">/parseQr</code>.</p>
+                <p><b>Польза:</b> типобезопасность и понятная схема входа.</p>
+            </details>
+        </article>
+
+        <!-- WebClientConfig -->
+        <article id="webclient" class="card section">
+            <h2>WebClientConfig.java</h2>
+            <p class="lead">Один <code class="inline">WebClient</code> на весь контекст.</p>
+            <pre><code>@Bean
+public WebClient webClient() {
+    return WebClient.builder().build();
+}</code></pre>
+            <p><b>Практика:</b> обычно здесь настраивают <i>baseUrl</i>, таймауты/пулы, логирование, retry, кодеки и т.д.</p>
+            <pre><code>// пример идеи
+WebClient.builder()
+  // .baseUrl("https://decode.example/api")
+  // .clientConnector(new ReactorClientHttpConnector(
+  //     HttpClient.create().responseTimeout(Duration.ofSeconds(5))))
+  .build();</code></pre>
+        </article>
+
+        <!-- SecurityConfig -->
+        <article id="security" class="card section">
+            <h2>SecurityConfig.java</h2>
+            <p class="lead">Разрешаем доступ к API в dev-режиме.</p>
+            <pre><code>http.csrf(csrf -&gt; csrf.disable())
+  .authorizeHttpRequests(auth -&gt; auth
+     .requestMatchers("/api/**").permitAll()
+     .anyRequest().permitAll());</code></pre>
+            <p><b>Практика:</b> для продакшена — закрыть всё лишнее, добавить CORS/аутентификацию.</p>
+        </article>
+
+        <!-- Endpoints -->
+        <article id="endpoints" class="card section">
+            <h2>REST-эндпоинты</h2>
+            <p class="lead">Минимальный набор для разработки и тестирования.</p>
+
+            <details open>
+                <summary>POST <code class="inline">/api/categorize</code></summary>
+                <pre><code>// Request
+{
+  "receiptId": "123",
+  "categories": [
+    {"id":1,"name":"Продукты","description":"Продукты питания"}
+  ]
+}
+
+// Response (текущая dev-версия: скелет + debugData)
+{
+  "receiptId": "123",
+  "items": [],
+  "totalSum": 0.0,
+  "categories": [ ... ],
+  "debugData": { ... }
+}</code></pre>
+                <p><b>Дальше:</b> по мере подключения внешнего парсинга будет наполнен <code class="inline">items</code> и рассчитан <code class="inline">totalSum</code>.</p>
+            </details>
+
+            <details>
+                <summary>POST <code class="inline">/api/decode</code></summary>
+                <pre><code>// Request
+{ "qr": "raw_qr_string_or_receipt_id" }
+
+// Response
+// raw текст/JSON из внешнего decode-API или мок при пустом токене</code></pre>
+            </details>
+
+            <details>
+                <summary>POST <code class="inline">/api/parseQr</code></summary>
+                <pre><code>// Request
+{ "qr": "t=...&amp;s=...&amp;fn=...&amp;i=...&amp;fp=...&amp;n=1" }
+
+// Response
+{ "t":"...", "s":"...", "fn":"...", "i":"...", "fp":"...", "n":"1" }</code></pre>
+            </details>
+        </article>
+
+        <!-- Tips -->
+        <article id="tips" class="card section">
+            <h2>Полезно знать</h2>
+            <ul>
+                <li><b>Быстрый тест в IDE:</b> открой <code class="inline">src/main/resources/test.http</code> и жми зелёные «▶» у запросов.</li>
+                <li><b>Стартовая страница:</b> этот файл лежит в <code class="inline">src/main/resources/static/index.html</code> и отдаётся как «/».</li>
+                <li><b>Dev-мок внешки:</b> если <code class="inline">receipt.api.token</code> пустой/«token», <code class="inline">ReceiptDecodeApi</code> вернёт мок — можно разрабатывать без доступов.</li>
+            </ul>
+        </article>
+
+    </section>
+</main>
+
+<footer class="footer">
+    © Demo demobackendproject Project · Spring Boot · Локальная документация
+</footer>
+
 </body>
 </html>
