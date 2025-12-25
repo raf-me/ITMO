@@ -6,7 +6,7 @@
 
 Используемый стек сервиса - Java 22, Spring Boot 4.0.0 RC2.0, Maven. 
 
-Ссылка на [репозиторий](https://github.com/raf-me/ITMO/tree/main/FPIn/DemoBackendProject) 
+Ссылка на [репозиторий проекта](https://github.com/raf-me/ITMO/tree/main/FPIn/DemoBackendProject) 
 
 #### Структура Backend:
 
@@ -36,7 +36,7 @@
 
 ---
 
-### Плохой Dockerfile:
+## Плохой Dockerfile:
 
     FROM openjdk:latest
     WORKDIR /app
@@ -45,7 +45,7 @@
     EXPOSE 8080
     CMD ["java", "-jar", "target/DemoBackendProject-0.0.1-SNAPSHOT.jar"]
 
-### Использование openjdk:latest
+### 1. Использование openjdk:latest
 
     FROM openjdk:latest
 
@@ -57,7 +57,7 @@
 
 Кроме того, полный образ Java содержит большое количество компонентов, не необходимых для запуска приложения в production, что увеличивает размер образа и площадь атаки.
 
-### Сборка и запуск приложения в одном образе
+### 2. Сборка и запуск приложения в одном образе
 
     RUN mvn clean package
     CMD ["java", "-jar", "target/DemoBackendProject-0.0.1-SNAPSHOT.jar"]
@@ -74,3 +74,48 @@
 - увеличению размера итогового образа,
 - более медленной сборке,
 - нарушению принципа разделения ответственности.
+
+### 3. Копирование всего контекста сборки
+
+    COPY . .
+
+В контейнер копируется весь проект целиком, включая:
+- .git,
+- .idea,
+- временные файлы,
+- тесты и служебные каталоги.
+
+Это:
+
+- увеличивает размер образа,
+- ломает Docker cache (пересборка происходит при любом изменении),
+- может привести к утечке лишних данных.
+
+### 4. Запуск контейнера от root-пользователя
+
+##### *(В плохом Dockerfile отсутствует инструкция USER, поэтому приложение запускается от root.)*
+
+Если злоумышленник получит доступ внутрь контейнера, он получит root-доступ, что может привести к:
+
+- установке вредоносного ПО,
+- чтению и изменению примонтированных volume,
+- попыткам выхода из контейнера на хост-систему.
+
+
+## Хороший Dockerfile:
+
+    FROM maven:3.9.9-eclipse-temurin-22 AS build
+    WORKDIR /build
+    COPY pom.xml .
+    RUN mvn dependency:go-offline
+    COPY src ./src
+    RUN mvn clean package -DskipTests
+    
+    FROM eclipse-temurin:22-jre
+    WORKDIR /app
+    RUN addgroup --system spring && adduser --system --ingroup spring spring
+    USER spring
+    COPY --from=build /build/target/DemoBackendProject-0.0.1-SNAPSHOT.jar app.jar
+    EXPOSE 8080
+    ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+
