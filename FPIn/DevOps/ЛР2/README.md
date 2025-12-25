@@ -369,3 +369,169 @@
 И запускается:
 
     docker run --env-file .env demo-backend
+
+
+---
+
+# Лабораторная работа 2*
+
+## Плохой docker-compose.yml:
+
+    version: "4.0"
+    
+    services:
+      backend:
+        image: demo-backend
+        container_name: backend_container
+        ports:
+          - "8080:8080"
+        environment:
+          RECEIPT_API_TOKEN: token
+        networks:
+          - shared_network
+    
+      another_service:
+        image: nginx:latest
+        container_name: nginx_container
+        ports:
+          - "80:80"
+        networks:
+          - shared_network
+    
+    networks:
+      shared_network:
+        driver: bridge
+
+### 1. Хранение секретных данных в docker-compose.yml
+
+    environment:
+      RECEIPT_API_TOKEN: token
+
+- секрет хранится в открытом виде
+- попадает в Git-репозиторий
+- легко утекает при копировании файла
+- невозможно безопасно менять между окружениями
+
+Риски:
+
+- компрометация API-ключей
+- нарушение security best practices
+
+### 2. Использование latest тега образа
+
+    image: nginx:latest
+
+Почему это плохо:
+
+- latest не гарантирует стабильность
+- при следующем запуске может скачаться другой образ
+- ломается воспроизводимость окружения
+
+Риски:
+
+- неожиданные ошибки
+- различия между dev / prod
+
+### 3. Общая сеть для всех сервисов
+
+Почему это плохо:
+
+- все контейнеры видят друг друга
+- сервисы могут обращаться напрямую по сети
+- отсутствует изоляция
+
+Риски:
+
+- lateral movement при взломе
+- нарушение принципа least privilege
+
+## Хороший docker-compose.yml:
+
+    version: "4.0"
+    
+    services:
+      backend:
+        image: demo-backend:1.0.0
+        container_name: backend_container
+        env_file:
+          - .env
+        ports:
+          - "8080:8080"
+        networks:
+          - backend_net
+    
+      auxiliary:
+        image: nginx:1.27-alpine
+        container_name: auxiliary_container
+        networks:
+          - auxiliary_net
+    
+    networks:
+      backend_net:
+        driver: bridge
+        internal: true
+    
+      auxiliary_net:
+        driver: bridge
+        internal: true
+
+### 1. Использование .env вместо хардкода секретов
+
+    env_file:
+      - .env
+
+Здесь секреты вынесены из compose-файла, .env добавляется в .gitignore, разные значения для разных окружений
+
+По итогу:
+
+- повышена безопасность
+- упрощена работа с CI/CD
+- compose-файл безопасен для GitHub
+
+### 2. Фиксированные версии образов
+
+    image: demo-backend:1.0.0
+    image: nginx:1.27-alpine
+
+Здесь изменилось окружение стало воспроизводимым и версия образа известна заранее
+
+И по итогу:
+- стабильные сборки
+- одинаковое поведение на всех машинах
+
+### 3. Изоляция сервисов по сетям
+
+    networks:
+      backend_net:
+        internal: true
+
+Здесь изменилось каждый сервис в своей сети и сети помечены как internal
+
+По итогу:
+
+- контейнеры не видят друг друга
+- доступ возможен только через проброшенные порты
+- соблюдён принцип zero trust networking
+
+## Сетевая изоляция контейнеров
+
+    internal: true
+
+- Для каждого сервиса создана отдельная сеть
+- Сервисы не подключены к одной и той же сети
+
+### Принцип изоляции
+
+Принцип изоляции:
+
+- Docker создаёт отдельные bridge-сети
+- Контейнер может видеть только контейнеры в той же сети
+- internal: true запрещает доступ извне Docker-хоста
+- Контейнеры не могут обращаться друг к другу по DNS или IP
+
+По итогу:
+
+- контейнеры поднимаются одновременно
+- compose-проект единый
+- сетевого взаимодействия между сервисами нет
+- безопасность выше, чем в shared-network подходе
