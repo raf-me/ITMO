@@ -1,0 +1,43 @@
+IT Tower;Service Family;Service Type;Service Sub Type;Service Usage Type;Product Code;Usage Type; [lineItem/Operation];lineItem/LineItemDescription
+Application;Management & Monitoring;Monitoring Service;Metrics & Logs;Monitoring Usage;AmazonCloudWatch;;;Tax%
+Application;Management & Monitoring;Monitoring Service;Metrics & Logs;Log Storage;AmazonCloudWatch;%TimedStorage-ByteHrs;;
+Application;Management & Monitoring;Monitoring Service;Metrics & Logs;Metrics Usage;AmazonCloudWatch;%Metrics;;
+Application;Management & Monitoring;Monitoring Service;Metrics & Logs;Log Data Scan;AmazonCloudWatch;%DataScanned-Bytes;;
+Application;Management & Monitoring;Monitoring Service;Metrics & Logs;Monitoring Usage;AmazonCloudWatch;;;
+Application;Management & Governance;Cost Management;Budgets;Budget Monitoring;AWSBudgets;;;Tax%
+Application;Management & Governance;Cost Management;Budgets;Budget Monitoring;AWSBudgets;%BudgetsUsage%;;
+Application;Developer Tools;Application Testing;Device Farm;Testing Minutes;AWSDeviceFarm;%Windows-Chrome%;;
+Application;Developer Tools;Application Testing;Device Farm;Testing Minutes;AWSDeviceFarm;%iOS-Device%;;
+Application;Developer Tools;Application Testing;Device Farm;Testing Minutes;AWSDeviceFarm;%iOS-RA%;;
+Application;Developer Tools;Application Testing;Device Farm;Testing Minutes;AWSDeviceFarm;%Android-Device%;;
+Application;Developer Tools;Application Testing;Device Farm;Testing Minutes;AWSDeviceFarm;%Android-RA%;;
+Application;Application Services;Serverless Compute;Function as a Service;Compute Duration;AWSLambda;;;Tax%
+Application;Application Services;Serverless Compute;Function as a Service;Compute Duration;AWSLambda;%Provisioned-GB-Second;;
+Application;Application Services;Serverless Compute;Function as a Service;Compute Duration;AWSLambda;%GB-Second;;
+Application;Application Services;Serverless Compute;Function as a Service;Compute Duration;AWSLambda;%Request;;
+Application;Application Services;Serverless Compute;Function as a Service;Compute Duration;AWSLambda;;ProvisionedConcurrency;
+Data;Data Processing Services;Big Data Processing;Managed Hadoop / Spark;Cluster Compute Hours;ElasticMapReduce;;;Tax%
+Data;Data Processing Services;Big Data Processing;Managed Hadoop / Spark;Cluster Compute Hours;ElasticMapReduce;%BoxUsage%;;
+Compute;Compute Services;Virtual Machines;EC2 Instances;Instance Usage;AmazonEC2;%BoxUsage%;;
+Compute;Compute Services;Virtual Machines;EC2 Instances;Instance Usage;AmazonEC2;%DedicatedUsage%;Surcharge;
+Compute;Compute Services;Virtual Machines;EC2 Instances;Instance Usage;AmazonEC2;%DedicatedUsage%;;
+Compute;Compute Services;Virtual Machines;EC2 Instances;Instance Usage;AmazonEC2;%HostUsage%;;
+Compute;Compute Services;Virtual Machines;EC2 Instances;Instance Usage;AmazonEC2;%EGpuUsage%;;
+Compute;Compute Services;Virtual Machines;EC2 Instances;Instance Usage;AmazonEC2;%CPUCredits%;;
+Data;Data Processing Services;Big Data Processing;Managed Hadoop / Spark;Cluster Compute Hours;ElasticMapReduce;;;Tax%
+Data;Data Processing Services;Big Data Processing;Managed Hadoop / Spark;Cluster Compute Hours;ElasticMapReduce;%BoxUsage%;;
+Application;Business Applications;Email Service;Managed Email;User Subscription;AmazonWorkMail;%WorkMail%;;
+Compute;End User Computing;Virtual Desktop;Managed VDI;Desktop Hours;AmazonWorkSpaces;;;Tax%
+Compute;End User Computing;Virtual Desktop;Managed VDI;Desktop Hours;AmazonWorkSpaces;%AW-HW%;;
+Compute;End User Computing;Virtual Desktop;Managed VDI;Desktop Hours;AmazonWorkSpaces;%AW-SW%;;
+Application;Business Applications;Voice Assistant;Alexa for Business;Device / User Usage;A4B;%SharedDevice%;;
+Application;Business Applications;Voice Assistant;Alexa for Business;Device / User Usage;A4B;%User%;;
+Application;Security Services;Security Analytics;Threat Investigation;Events Analysis;AmazonDetective;%PreviewLogsAnalyzed-Bytes;;
+Application;Security Services;Security Assessment;Vulnerability Scanning;Assessment Usage;AmazonInspector;%agent-assessments%;;
+Application;Security Services;Security Assessment;Vulnerability Scanning;Assessment Usage;AmazonInspector;%network-assessments%;;
+Application;Security Services;Data Security;Sensitive Data Discovery;Data Analysis;AmazonMacie;;;
+Application;Engagement Services;Customer Engagement;Messaging & Analytics;Message Delivery;AmazonPinpoint;%Pinpoint_DeliveryAttempts_GCM;;
+Application;Engagement Services;Customer Engagement;Messaging & Analytics;Message Delivery;AmazonPinpoint;%Pinpoint_DeliveryAttempts_APNS;;
+Application;Engagement Services;Customer Engagement;Messaging & Analytics;Message Delivery;AmazonPinpoint;Pinpoint_MonthlyTargetedAudience;Notification;
+Application;Engagement Services;Customer Engagement;Messaging & Analytics;Message Delivery;AmazonPinpoint;%EventsRecorded;PutEvents;
+Application;Analytics Services;Mobile Analytics;Usage Analytics;Events Processing;mobileanalytics;EventsRecorded;PutEvents;
