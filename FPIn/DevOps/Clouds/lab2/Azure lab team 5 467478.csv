@@ -1,0 +1,48 @@
+IT Tower;Service Family;Service Type;Service Sub Type;Service Usage Type;Meter Category;Meter Sub-Category;Meter Name;Consumed Service
+Data;Analytics Services;Analytics Platform;Azure Analysis Services;Analytics Capacity;Analysis Services;Tabular;Standard S%;Microsoft.AnalysisServices
+Data;Analytics Services;Analytics Platform;Azure Analysis Services;Analytics Capacity;Analysis Services;Tabular;Basic B%;Microsoft.AnalysisServices
+Data;Analytics Services;Analytics Platform;Azure Analysis Services;Analytics Capacity;Analysis Services;Tabular;Developer (Hours);Microsoft.AnalysisServices
+Data;Analytics Services;Analytics Platform;Azure Analysis Services;Analytics Capacity;Azure Analysis Services;Basic;B%;Microsoft.AnalysisServices
+Data;Analytics Services;Analytics Platform;Azure Analysis Services;Analytics Capacity;Azure Analysis Services;Developer;Developer;Microsoft.AnalysisServices
+Data;Analytics Services;Analytics Platform;Azure Analysis Services;Analytics Capacity;Azure Analysis Services;Standard;S%;Microsoft.AnalysisServices
+Data;Database Services;Relational Database;Managed SQL Database;DB Usage;Azure Database for PostgreSQL;;;Microsoft.DBforMyQL
+Data;Database Services;Relational Database;Managed SQL Database;DB Usage;Azure Database for PostgreSQL;;;Microsoft.DBforPostgreSQL
+Data;Data Processing Services;Big Data Analytics;Azure Databricks;Cluster Usage;Azure Databricks;;%Data Analytics%;Microsoft.Databricks
+Data;Data Processing Services;Big Data Analytics;Azure Databricks;Cluster Usage;Azure Databricks;;%Data Engineering%;Microsoft.Databricks
+Application;Management & Monitoring;Monitoring Service;Azure Monitor;Metrics / Logs;Azure Monitor;Notifications;Webhook;microsoft.insights
+Application;Management & Monitoring;Monitoring Service;Azure Monitor;Metrics / Logs;Azure Monitor;Notifications;Email;microsoft.insights
+Compute;Compute Services;Batch Processing;Azure Batch;Job Compute Hours;Virtual Machines;;;Microsoft.Batch
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;A Series Basic%;;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;A%;;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;B%;;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;D%;D1/%;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;D%;D1 %;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;D%;D1%;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;D%;D%;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;E%;;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;F%;;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;Standard_F4 VM (Windows);Compute Hours;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;G%;;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;H%;;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;L%;;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;M%;;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;N%;;%Compute
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Virtual Machines;S%;;%Compute
+Application;ML / AI Services;Machine Learning Platform;Azure ML;Training / Inference;Virtual Machines;;;Microsoft.MachineLearningServices
+;;;;;Virtual Network;;;
+Compute;Compute Services;Batch Processing;Azure Batch;Job Compute Hours;Load Balancer;;;Microsoft.Batch
+Application;ML / AI Services;Machine Learning Platform;Azure ML;Training / Inference;Load Balancer;;;Microsoft.MachineLearningServices
+Network;Network Services;Virtual Networking;Azure Virtual Network;Network Usage;Load Balancer;;;Microsoft.Network
+Application;Application Services;Realtime Messaging;Azure SignalR;Message Units;SignalR;;;Microsoft.SignalRService
+;;;;;Event Grid;;Operations;
+Storage;Storage Services;Object / Block Storage;Azure Storage;Storage Usage;Windows Azure - All Services;All;Data Transfer Out%;Microsoft.Storage
+Application;Media Services;Media Processing;Azure Media Services;Streaming / Encoding;Media Services;;;microsoft.media
+Application;IoT Services;IoT Platform;Azure IoT Hub;Device Messaging;IoT Hub;;;Microsoft.Devices
+Data;Database Services;Relational Database;Managed SQL Database;DB Usage;SQL Data Warehouse;%Storage;;Microsoft.Sql
+Data;Database Services;Relational Database;Managed SQL Database;DB Usage;Storage;;;Microsoft.Sql
+Application;Backup Services;Backup Management;Azure Backup;Backup Storage / Restore;Storage;;;microsoft._ackup
+Application;Backup Services;Backup Management;Azure Backup;Backup Storage / Restore;Storage;;;Microsoft.RecoveryServices
+Storage;Storage Services;Object / Block Storage;Azure Storage;Storage Usage;Storage;;;%_torage%
+Compute;Compute Services;Virtual Machines;Azure Virtual Machines;Compute Hours;Storage;;;Microsoft.Compute
+Application;ML / AI Services;Machine Learning Platform;Azure ML;Training / Inference;Storage;;;Microsoft.MachineLearningServices
+Compute;Compute Services;Batch Processing;Azure Batch;Job Compute Hours;Storage;;;Microsoft.Batch
