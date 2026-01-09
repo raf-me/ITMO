@@ -1,0 +1,8 @@
+[
+  {
+    "PersonID" : 2200001,
+    "Name" : "Nikolaev Nikolai",
+    "Password" : 1234567,
+    "Courses" : ["oop", "Computer arch"]
+  }
+]

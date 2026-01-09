@@ -1,0 +1,9 @@
+[
+  {
+    "CoursesID" : 320001,
+    "courseName" : "oop",
+    "category" : "программирование",
+    "comment" : "Hight level programming", 
+    "Permission" : "offline"
+  }
+]
