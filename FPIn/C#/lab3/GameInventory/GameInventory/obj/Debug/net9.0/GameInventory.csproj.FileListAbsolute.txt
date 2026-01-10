@@ -1,0 +1,14 @@
+/Users/rafael/RiderProjects/GameInventory/GameInventory/bin/Debug/net9.0/GameInventory
+/Users/rafael/RiderProjects/GameInventory/GameInventory/bin/Debug/net9.0/GameInventory.deps.json
+/Users/rafael/RiderProjects/GameInventory/GameInventory/bin/Debug/net9.0/GameInventory.runtimeconfig.json
+/Users/rafael/RiderProjects/GameInventory/GameInventory/bin/Debug/net9.0/GameInventory.dll
+/Users/rafael/RiderProjects/GameInventory/GameInventory/bin/Debug/net9.0/GameInventory.pdb
+/Users/rafael/RiderProjects/GameInventory/GameInventory/obj/Debug/net9.0/GameInventory.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rafael/RiderProjects/GameInventory/GameInventory/obj/Debug/net9.0/GameInventory.AssemblyInfoInputs.cache
+/Users/rafael/RiderProjects/GameInventory/GameInventory/obj/Debug/net9.0/GameInventory.AssemblyInfo.cs
+/Users/rafael/RiderProjects/GameInventory/GameInventory/obj/Debug/net9.0/GameInventory.csproj.CoreCompileInputs.cache
+/Users/rafael/RiderProjects/GameInventory/GameInventory/obj/Debug/net9.0/GameInventory.dll
+/Users/rafael/RiderProjects/GameInventory/GameInventory/obj/Debug/net9.0/refint/GameInventory.dll
+/Users/rafael/RiderProjects/GameInventory/GameInventory/obj/Debug/net9.0/GameInventory.pdb
+/Users/rafael/RiderProjects/GameInventory/GameInventory/obj/Debug/net9.0/GameInventory.genruntimeconfig.cache
+/Users/rafael/RiderProjects/GameInventory/GameInventory/obj/Debug/net9.0/ref/GameInventory.dll

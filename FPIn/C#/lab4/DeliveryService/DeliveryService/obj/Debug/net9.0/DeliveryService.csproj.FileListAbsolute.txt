@@ -1,0 +1,14 @@
+/Users/rafael/RiderProjects/DeliveryService/DeliveryService/bin/Debug/net9.0/DeliveryService
+/Users/rafael/RiderProjects/DeliveryService/DeliveryService/bin/Debug/net9.0/DeliveryService.deps.json
+/Users/rafael/RiderProjects/DeliveryService/DeliveryService/bin/Debug/net9.0/DeliveryService.runtimeconfig.json
+/Users/rafael/RiderProjects/DeliveryService/DeliveryService/bin/Debug/net9.0/DeliveryService.dll
+/Users/rafael/RiderProjects/DeliveryService/DeliveryService/bin/Debug/net9.0/DeliveryService.pdb
+/Users/rafael/RiderProjects/DeliveryService/DeliveryService/obj/Debug/net9.0/DeliveryService.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rafael/RiderProjects/DeliveryService/DeliveryService/obj/Debug/net9.0/DeliveryService.AssemblyInfoInputs.cache
+/Users/rafael/RiderProjects/DeliveryService/DeliveryService/obj/Debug/net9.0/DeliveryService.AssemblyInfo.cs
+/Users/rafael/RiderProjects/DeliveryService/DeliveryService/obj/Debug/net9.0/DeliveryService.csproj.CoreCompileInputs.cache
+/Users/rafael/RiderProjects/DeliveryService/DeliveryService/obj/Debug/net9.0/DeliveryService.dll
+/Users/rafael/RiderProjects/DeliveryService/DeliveryService/obj/Debug/net9.0/refint/DeliveryService.dll
+/Users/rafael/RiderProjects/DeliveryService/DeliveryService/obj/Debug/net9.0/DeliveryService.pdb
+/Users/rafael/RiderProjects/DeliveryService/DeliveryService/obj/Debug/net9.0/DeliveryService.genruntimeconfig.cache
+/Users/rafael/RiderProjects/DeliveryService/DeliveryService/obj/Debug/net9.0/ref/DeliveryService.dll
