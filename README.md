@@ -12,10 +12,9 @@
 
 # Мобильные и сетевые технологии 2024
 1. [Программирование (1 сем)](https://github.com/raf-me/ITMO/tree/main/FPIn/ProgrammingPython)
-1. [Программирование (1 сем)](
 2. Алгоритмы и структуры данных (1 сем)
 3. [Инфокоммуникационные системы и технологии - курсовая (1 сем)](https://github.com/raf-me/ITMO/tree/main/FPIn/DemoBackendProject)
-4. Программирование (2 сем)
+4. [Программирование (2 сем)](https://github.com/raf-me/ITMO/tree/main/FPIn/Programming)
 5. Алгоритмы и структуры данных (2 сем)
 6. [Объектно-ориентированное программирование на C# (3 сем)](https://github.com/raf-me/ITMO/tree/main/FPIn/C%23)
 7. [Базы данных (3 сем)](https://github.com/raf-me/ITMO/tree/main/FPIn/DataBase)
