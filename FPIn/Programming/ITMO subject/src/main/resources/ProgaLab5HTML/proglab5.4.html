@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 12px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+        b {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<p><b>Внимание!</b> У разных вариантов разный текст задания!</p>
+
+<p>Реализовать консольное приложение, которое реализует управление коллекцией объектов в интерактивном режиме. 
+В коллекции необходимо хранить объекты класса Vehicle, описание которого приведено ниже.</p>
+
+<p><b>Разработанная программа должна удовлетворять следующим требованиям:</b></p>
+<ul>
+<li>Класс, коллекцией экземпляров которого управляет программа, должен реализовывать сортировку по умолчанию.</li>
+<li>Все требования к полям класса (указанные в виде комментариев) должны быть выполнены.</li>
+<li>Для хранения необходимо использовать коллекцию типа java.util.TreeMap</li>
+<li>При запуске приложения коллекция должна автоматически заполняться значениями из файла.</li>
+<li>Имя файла должно передаваться программе с помощью: переменная окружения.</li>
+<li>Данные должны храниться в файле в формате json</li>
+<li>Чтение данных из файла необходимо реализовать с помощью класса java.io.FileReader</li>
+<li>Запись данных в файл необходимо реализовать с помощью класса java.io.FileWriter</li>
+<li>Все классы в программе должны быть задокументированы в формате javadoc.</li>
+<li>Программа должна корректно работать с неправильными данными.</li>
+</ul>
+
+<p><b>В интерактивном режиме программа должна поддерживать выполнение следующих команд:</b></p>
+<pre>
+help : справка по командам
+info : информация о коллекции
+show : вывести все элементы
+insert null {element} : добавить новый элемент
+update id {element} : обновить по id
+remove_key null : удалить по ключу
+clear : очистить коллекцию
+save : сохранить в файл
+execute_script file_name : выполнить скрипт
+exit : завершить программу
+remove_lower {element} : удалить меньшие элементы
+history : последние 7 команд
+replace_if_lowe null {element} : заменить, если меньше
+max_by_type : элемент с максимальным type
+group_counting_by_distance_travelled : сгруппировать по distanceTravelled
+filter_starts_with_name name : фильтрация по началу name
+</pre>
+
+<p><b>Формат ввода команд:</b></p>
+<p>Стандартные типы — в одной строке. Объекты — по полю в строку. 
+enum — вводится из списка. null — пустая строка. Автогенерируемые поля — не вводятся.</p>
+
+<p><b>Описание классов:</b></p>
+<pre>
+public class Vehicle {
+    private Long id; // >0, уникально, генерируется
+    private String name; // not null, not empty
+    private Coordinates coordinates; // not null
+    private ZonedDateTime creationDate; // not null, генерируется
+    private Integer enginePower; // >0, может быть null
+    private int distanceTravelled; // >0
+    private VehicleType type; // может быть null
+    private FuelType fuelType; // not null
+}
+public class Coordinates {
+    private float x; // ≤ 432
+    private Double y; // ≤ 51, not null
+}
+public enum VehicleType {
+    DRONE, BOAT, SHIP;
+}
+public enum FuelType {
+    KEROSENE, ELECTRICITY, MANPOWER, NUCLEAR, PLASMA;
+}
+</pre>
+
+<p><b>Отчёт по работе должен содержать:</b></p>
+<ul>
+<li>Текст задания</li>
+<li>Диаграмма классов</li>
+<li>Исходный код</li>
+<li>Выводы</li>
+</ul>
+
+<p><b>Вопросы к защите лабораторной работы:</b></p>
+<ul>
+<li>Коллекции. Comparable и Comparator.</li>
+<li>Категории коллекций. Map и его реализации.</li>
+<li>Параметризованные типы. Wildcard.</li>
+<li>Классы-оболочки. Автоупаковка.</li>
+<li>Потоки ввода-вывода. Stream chains.</li>
+<li>Работа с файлами. java.io.File.</li>
+<li>Пакет java.nio.</li>
+<li>javadoc и документирование.</li>
+</ul>
+</body>
+</html>
