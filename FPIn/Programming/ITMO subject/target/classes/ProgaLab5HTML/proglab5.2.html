@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 12px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+        b {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<p><b>Внимание!</b> У разных вариантов разный текст задания!</p>
+
+<p>Реализовать консольное приложение, которое реализует управление коллекцией объектов в интерактивном режиме. 
+В коллекции необходимо хранить объекты класса HumanBeing, описание которого приведено ниже.</p>
+
+<p><b>Разработанная программа должна удовлетворять следующим требованиям:</b></p>
+<ul>
+<li>Класс, коллекцией экземпляров которого управляет программа, должен реализовывать сортировку по умолчанию.</li>
+<li>Все требования к полям класса (указанные в виде комментариев) должны быть выполнены.</li>
+<li>Для хранения необходимо использовать коллекцию типа java.util.Stack</li>
+<li>При запуске приложения коллекция должна автоматически заполняться значениями из файла.</li>
+<li>Имя файла должно передаваться программе с помощью: аргумент командной строки.</li>
+<li>Данные должны храниться в файле в формате json</li>
+<li>Чтение данных из файла необходимо реализовать с помощью класса java.io.InputStreamReader</li>
+<li>Запись данных в файл необходимо реализовать с помощью класса java.io.OutputStreamWriter</li>
+<li>Все классы в программе должны быть задокументированы в формате javadoc.</li>
+<li>Программа должна корректно работать с неправильными данными (ошибки пользовательского ввода, отсутсвие прав доступа к файлу и т.п.).</li>
+</ul>
+
+<p><b>В интерактивном режиме программа должна поддерживать выполнение следующих команд:</b></p>
+<pre>
+help : вывести справку по доступным командам
+info : вывести информацию о коллекции
+show : вывести все элементы коллекции
+add {element} : добавить новый элемент
+update id {element} : обновить элемент по id
+remove_by_id id : удалить по id
+clear : очистить коллекцию
+save : сохранить коллекцию в файл
+execute_script file_name : выполнить скрипт из файла
+exit : завершить программу
+add_if_min {element} : добавить, если меньше минимального
+shuffle : перемешать элементы
+reorder : отсортировать в обратном порядке
+min_by_id : вывести объект с минимальным id
+print_field_ascending_impact_speed : вывести impactSpeed по возрастанию
+print_field_descending_weapon_type : вывести weaponType по убыванию
+</pre>
+
+<p><b>Формат ввода команд:</b></p>
+<p>Все аргументы стандартных типов вводятся в одной строке с командой. Объекты вводятся по одному полю в строку с подсказкой. 
+Для enum — выбирается из списка. Для null — используется пустая строка. Поля, которые должны генерироваться автоматически, не вводятся.</p>
+
+<p><b>Описание классов:</b></p>
+<pre>
+public class HumanBeing {
+    private int id; // > 0, уникальное, генерируется
+    private String name; // not null, not empty
+    private Coordinates coordinates; // not null
+    private LocalDate creationDate; // not null, генерируется
+    private Boolean realHero; // not null
+    private boolean hasToothpick;
+    private Double impactSpeed; // ≤ 759, может быть null
+    private WeaponType weaponType; // может быть null
+    private Mood mood; // может быть null
+    private Car car; // может быть null
+}
+public class Coordinates {
+    private long x;
+    private float y;
+}
+public class Car {
+    private String name; // not null
+}
+public enum WeaponType {
+    PISTOL, RIFLE, KNIFE, MACHINE_GUN, BAT;
+}
+public enum Mood {
+    SADNESS, LONGING, GLOOM, CALM, RAGE;
+}
+</pre>
+
+<p><b>Отчёт по работе должен содержать:</b></p>
+<ul>
+<li>Текст задания</li>
+<li>Диаграмма классов</li>
+<li>Исходный код</li>
+<li>Выводы</li>
+</ul>
+
+<p><b>Вопросы к защите лабораторной работы:</b></p>
+<ul>
+<li>Коллекции. Сортировка. Comparable и Comparator.</li>
+<li>Категории коллекций. Map и его реализации.</li>
+<li>Параметризованные типы. Wildcard.</li>
+<li>Классы-оболочки. Автоупаковка.</li>
+<li>Потоки ввода-вывода. Stream chains.</li>
+<li>Работа с файлами. java.io.File.</li>
+<li>Пакет java.nio — назначение.</li>
+<li>javadoc — документирование кода.</li>
+</ul>
+</body>
+</html>
