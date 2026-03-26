@@ -1,0 +1,44 @@
+seed: 42
+
+dataset:
+  provider: "huggingface"
+  name: "ag_news"
+  text_field: "text"
+  label_field: "label"
+  max_train_samples: 50000
+  max_test_samples:  7600
+  use_dense_adapter: true
+
+vectorizers:
+  - type: "count"
+    params:
+      max_features: 20000
+      ngram_range: [1, 1]
+
+  - type: "tfidf"
+    params:
+      max_features: 20000
+      ngram_range: [1, 2]
+
+  - type: "embeddings"
+    params:
+      model_name: "sentence-transformers/all-MiniLM-L6-v2"
+      batch_size: 64
+      normalize: true
+
+models:
+  - type: "naive_bayes"
+    allowed_vectorizers: ["count", "tfidf"]
+
+  - type: "logistic"
+    allowed_vectorizers: ["count", "tfidf", "embeddings"]
+
+  - type: "knn"
+    allowed_vectorizers: ["count", "tfidf", "embeddings"]
+
+  - type: "random_forest"
+    allowed_vectorizers: ["embeddings"]
+
+
+output:
+  results_csv_path: "results.csv"
