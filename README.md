@@ -20,6 +20,7 @@
 7. [Базы данных (3 сем)](https://github.com/raf-me/ITMO/tree/main/FPIn/DataBase)
 8. [Облачные технологии и услуги (3 сем)](https://github.com/raf-me/ITMO/tree/main/FPIn/DevOps)
 9. Проектирование и взаимодействие в UX/UI (3 сем)
+10. [Учебная практика - "Векторазиторы в машинном обучении и анализе текста"](https://github.com/raf-me/ITMO/tree/main/FPIn/MLproject/)
 
 # Компьютерные технологии
 1. [Введение в программирование на Java (1 сем)](https://github.com/raf-me/ITMO/tree/main/КТ/Введение%20в%20программирование/)
