@@ -24,7 +24,7 @@
 11. [Учебная практика - "Векторазиторы в машинном обучении и анализе текста"](https://github.com/raf-me/ITMO/tree/main/FPIn/MLproject/)
 12. [Базы данных (4 сем)](https://github.com/raf-me/ITMO/tree/main/FPIn/DataBase)
 13. [Математическая статистика (4 сем)](https://github.com/raf-me/ITMO/tree/main/FPIn/Mathematical%20statistics)
-14. [Объектно-ориентированное программирование (4 сем)]()
+14. [Объектно-ориентированное программирование (4 сем)](https://github.com/raf-me/ITMO/tree/main/FPIn/OOP)
 15. [Компьютерные сети (4 сем)](https://github.com/raf-me/ITMO/tree/main/FPIn/Computer%20networks)
 16. [Методы визуализации данных (4 сем)](https://github.com/raf-me/ITMO/tree/main/FPIn/Data%20visualization%20methods)
 17. [Электричество и магнетизм (4 сем)]
