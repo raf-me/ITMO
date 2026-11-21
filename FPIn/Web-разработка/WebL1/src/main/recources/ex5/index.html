@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Журнал оценок</title>
+</head>
+<body>
+    <h1>Журнал оценок</h1>
+
+    <form action="/" method="post">
+        <p>
+            <label>
+                Дисциплина:
+                <input type="text" name="subject" required>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Оценки через запятую:
+                <input type="text" name="grades"
+                       placeholder="4, 5, 5" required>
+            </label>
+        </p>
+
+        <button type="submit">Добавить</button>
+    </form>
+
+    <h2>Все оценки</h2>
+
+    <table border="1">
+        <tr>
+            <th>Дисциплина</th>
+            <th>Оценки</th>
+        </tr>
+        {{rows}}
+    </table>
+</body>
+</html>
